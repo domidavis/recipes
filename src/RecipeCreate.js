@@ -35,7 +35,6 @@ function RecipeCreate({ createRecipe }) {
       setPreparation(target.value);
     }
   }
-
   return (
     <form className="create" onSubmit={onSubmitHandler} name="create">
       <table>
@@ -49,6 +48,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Name"
                 onChange={recipeChangeHandler}
                 value={name}
+                required
               />
             </td>
             <td>
@@ -59,6 +59,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Cuisine"
                 onChange={recipeChangeHandler}
                 value={cuisine}
+                required
               />
             </td>
             <td>
@@ -69,6 +70,7 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="URL"
                 onChange={recipeChangeHandler}
                 value={photo}
+                required
               />
             </td>
             <td>
@@ -78,7 +80,9 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Ingredients"
                 onChange={recipeChangeHandler}
                 value={ingredients}
-                rows={3} />
+                rows={3} 
+                required
+                />
             </td>
             <td>
               <textarea
@@ -87,7 +91,9 @@ function RecipeCreate({ createRecipe }) {
                 placeholder="Preparation"
                 onChange={recipeChangeHandler}
                 value={preparation}
-                rows={3} />
+                rows={3} 
+                required
+                />
             </td>
             <td>
               <button type="submit">Create</button>
